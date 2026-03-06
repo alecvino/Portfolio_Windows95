@@ -2,3 +2,7 @@
 body {
   background-color: #008080;
 }
+
+.active {
+  z-index: 9999 !important;
+}

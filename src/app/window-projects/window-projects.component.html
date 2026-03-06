@@ -1,7 +1,9 @@
 <!-- Fenster -->
-<div class="window"></div>
 <div>
-  <div class="window">
+  <div
+    class="window"
+    [ngClass]="windowService.activeWindow === 'projects' ? 'active' : ''"
+  >
     <div class="window-banner">
       <div class="window-title">
         <img src="projects.png" class="responsive-img" />
