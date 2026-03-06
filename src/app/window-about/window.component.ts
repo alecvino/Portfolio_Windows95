@@ -10,4 +10,9 @@ import { NgClass } from '@angular/common';
 })
 export class WindowComponent {
   windowService = inject(WindowsService);
+
+  onClose() {
+    this.windowService.openWindowAbout = false;
+    console.log('Window closed');
+  }
 }

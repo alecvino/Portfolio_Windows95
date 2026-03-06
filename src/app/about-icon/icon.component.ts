@@ -13,7 +13,10 @@ export class IconComponent {
 
   onOpen() {
     this.windowService.activeWindow = 'about';
-    this.windowService.openWindowAbout = !this.windowService.openWindowAbout;
+
+    if (!this.windowService.openWindowAbout) {
+      this.windowService.openWindowAbout = true;
+    }
     console.log('About me opened');
   }
 }
