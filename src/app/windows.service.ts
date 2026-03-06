@@ -4,9 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class WindowsService {
-  openWindow: boolean = false;
-
+  openWindowAbout: boolean = false;
   openWindowProjects: boolean = false;
+
+  activeWindow: string = '';
 
   constructor() {}
 }

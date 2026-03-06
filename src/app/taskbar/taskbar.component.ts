@@ -7,4 +7,7 @@ import { WindowsService } from '../windows.service';
   templateUrl: './taskbar.component.html',
   styleUrl: './taskbar.component.css',
 })
-export class TaskbarComponent {}
+export class TaskbarComponent {
+  windowService = inject(WindowsService);
+  currentTime: Date = new Date();
+}

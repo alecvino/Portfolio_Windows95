@@ -1,5 +1,12 @@
 <!-- Projects-Icon -->
-<div class="icon-container" (click)="onOpenProjects()">
-  <img src="projects.png" />
-  Projects
-</div>
+@if (activeWindow === "projects") {
+  <div style="z-index: 1000" class="icon-container" (click)="onOpenProjects()">
+    <img src="projects.png" />
+    Projects
+  </div>
+} @else {
+  <div class="icon-container" (click)="onOpenProjects()">
+    <img src="projects.png" />
+    Projects
+  </div>
+}

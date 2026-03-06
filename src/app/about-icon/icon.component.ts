@@ -9,12 +9,13 @@ import { WindowsService } from '../windows.service';
 })
 export class IconComponent {
   aboutOpened: boolean = false;
-
+  activeWindow: string = '';
   windowService = inject(WindowsService);
 
   onOpen() {
+    this.windowService.activeWindow = 'about';
     this.aboutOpened = !this.aboutOpened;
-    this.windowService.openWindow = !this.windowService.openWindow;
+    this.windowService.openWindowAbout = !this.windowService.openWindowAbout;
     console.log('About me opened');
   }
 }

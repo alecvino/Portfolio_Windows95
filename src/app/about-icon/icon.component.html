@@ -1,0 +1,12 @@
+<!-- About me-Icon -->
+@if (activeWindow === "about") {
+  <div style="z-index: 1000" class="icon-container" (click)="onOpen()">
+    <img src="about.png" />
+    About me
+  </div>
+} @else {
+  <div class="icon-container" (click)="onOpen()">
+    <img src="about.png" />
+    About me
+  </div>
+}

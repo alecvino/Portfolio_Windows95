@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TaskbarComponent } from './taskbar/taskbar.component';
-import { WindowComponent } from './window/window.component';
+import { WindowComponent } from './window-about/window.component';
 import { WindowsService } from './windows.service';
-import { IconComponent } from './icon/icon.component';
+import { IconComponent } from './about-icon/icon.component';
 import { ProjectIconComponent } from './project-icon/project-icon.component';
 import { WindowProjectsComponent } from './window-projects/window-projects.component';
 
