@@ -13,9 +13,7 @@ export class ProjectIconComponent {
 
   onOpenProjects() {
     this.windowService.activeWindow = 'projects';
-    if (!this.windowService.openWindowProjects) {
-      this.windowService.openWindowProjects = true;
-    }
+    this.windowService.projectsWindowState = 'open';
     console.log('Projects opened');
   }
 }

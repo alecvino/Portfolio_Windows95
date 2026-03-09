@@ -14,9 +14,7 @@ export class IconComponent {
   onOpen() {
     this.windowService.activeWindow = 'about';
 
-    if (!this.windowService.openWindowAbout) {
-      this.windowService.openWindowAbout = true;
-    }
+    this.windowService.aboutWindowState = 'open';
     console.log('About me opened');
   }
 }

@@ -17,11 +17,11 @@
 
 <app-taskbar></app-taskbar>
 <app-icon></app-icon>
-@if (windowService.openWindowAbout) {
+@if (windowService.aboutWindowState !== "closed") {
   <app-window></app-window>
 }
 <app-project-icon></app-project-icon>
-@if (windowService.openWindowProjects) {
+@if (windowService.projectsWindowState !== "closed") {
   <app-window-projects></app-window-projects>
 }
 

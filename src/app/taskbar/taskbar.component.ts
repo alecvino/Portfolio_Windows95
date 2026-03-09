@@ -9,5 +9,16 @@ import { WindowsService } from '../windows.service';
 })
 export class TaskbarComponent {
   windowService = inject(WindowsService);
-  currentTime: Date = new Date();
+
+  onProjectsClick() {
+    this.windowService.activeWindow = 'projects';
+    this.windowService.projectsWindowState = 'open';
+    console.log('Projects window opened');
+  }
+
+  onAboutClick() {
+    this.windowService.activeWindow = 'about';
+    this.windowService.aboutWindowState = 'open';
+    console.log('About me window opened');
+  }
 }

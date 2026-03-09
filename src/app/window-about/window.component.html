@@ -1,6 +1,8 @@
 <!-- Fenster -->
-<div>
+<div *ngIf="windowService.aboutWindowState !== 'minimized'">
   <div
+    cdkDrag
+    (mousedown)="windowService.activeWindow = 'about'"
     [ngClass]="windowService.activeWindow === 'about' ? 'active' : ''"
     class="window"
   >
@@ -10,7 +12,7 @@
         About me
       </div>
       <div>
-        <button><img src="minimize.png" /></button>
+        <button (click)="onMinimize()"><img src="minimize.png" /></button>
         <button><img src="maximize.png" /></button>
         <button (click)="onClose()"><img src="close.png" /></button>
       </div>
