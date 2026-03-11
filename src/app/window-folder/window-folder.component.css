@@ -1,0 +1,149 @@
+.window-title {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  position: absolute;
+  top: 50px;
+  left: 350px;
+  width: 45%;
+  height: 70%;
+  border-style: outset;
+  background-color: #c0c0c0;
+}
+
+.window-banner {
+  width: 100%;
+  height: 25px;
+  background-color: #808080;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-container {
+  width: 100%;
+  height: 95%;
+  display: grid;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.content {
+  height: auto;
+}
+
+/* Kachel-Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: solid;
+  /*border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;*/
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Lightbox Overlay */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #c0c0c0;
+  padding: 10px;
+  /*border-radius: 8px;*/
+  text-align: center;
+  border: outset;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+/* Navigation-Pfeile */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  /*transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;*/
+  background-color: #c0c0c0;
+  border: outset;
+  font-size: 24px;
+  padding: 8px 12px;
+  user-select: none;
+}
+
+.nav-btn.left {
+  left: -125px;
+}
+
+.nav-btn.right {
+  right: -125px;
+}
+
+/*.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}*/
+
+/* Schließen-Button */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  /*cursor: pointer;*/
+}

@@ -8,6 +8,7 @@ export type WindowState = 'open' | 'minimized' | 'closed';
 export class WindowsService {
   aboutWindowState: WindowState = 'closed';
   projectsWindowState: WindowState = 'closed';
+  folderWindowState: WindowState = 'closed';
 
   activeWindow: string = '';
 

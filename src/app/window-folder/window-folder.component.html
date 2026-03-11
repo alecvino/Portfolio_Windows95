@@ -1,0 +1,55 @@
+<div *ngIf="windowService.folderWindowState !== 'minimized'">
+  <div
+    cdkDrag
+    (mousedown)="windowService.activeWindow = 'folder'"
+    class="window"
+    [ngClass]="windowService.activeWindow === 'folder' ? 'active' : ''"
+  >
+    <div class="window-banner">
+      <div class="window-title">
+        <img src="folder.png" class="responsive-img" />
+        Design Folder
+      </div>
+      <div>
+        <button (click)="onMinimize()"><img src="minimize.png" /></button>
+        <button><img src="maximize.png" /></button>
+        <button (click)="onClose()"><img src="close.png" /></button>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="gallery-grid">
+        <div
+          class="gallery-item"
+          *ngFor="let img of images; let i = index"
+          (click)="openLightbox(i)"
+        >
+          <img [src]="img.src" [alt]="img.title" loading="lazy" />
+          <div class="caption">{{ img.title }}</div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" *ngIf="selectedImage" (click)="closeLightbox()">
+        <div class="lightbox-content" (click)="$event.stopPropagation()">
+          <!-- Pfeil links -->
+          <button class="nav-btn left" (click)="prevImage($event)">
+            &#10094; Back
+          </button>
+
+          <!-- Bild -->
+          <img [src]="selectedImage.src" [alt]="selectedImage.title" />
+          <p>{{ selectedImage.title }}</p>
+
+          <!-- Pfeil rechts -->
+          <button class="nav-btn right" (click)="nextImage($event)">
+            Next &#10095;
+          </button>
+
+          <!-- Schließen -->
+          <button class="close-btn" (click)="closeLightbox()">×</button>
+        </div>
+      </div>
+      <div class="content"></div>
+    </div>
+  </div>
+</div>

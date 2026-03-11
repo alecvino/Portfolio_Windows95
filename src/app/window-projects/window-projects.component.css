@@ -9,7 +9,7 @@
   position: absolute;
   top: 50px;
   left: 350px;
-  width: 30%;
+  width: 45%;
   height: 45%;
   border-style: outset;
   background-color: #c0c0c0;
@@ -28,9 +28,63 @@
 
 .project-container {
   width: 100%;
-  height: 100%;
+  height: 92%;
+  display: grid;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.content {
+  height: 1000px;
+}
+
+.picture {
+  width: 300px;
+  height: 150px;
+  margin: 25px;
+  border-style: solid;
+  background-color: white;
+}
+
+article {
+  margin: 10px;
+  border: solid;
+  display: grid;
+}
+
+main {
+  grid-column: 4 / 13;
+  grid-row: 1;
+  margin: 25px;
+}
+
+aside {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+footer {
+  grid-column: 1 / 13;
+  grid-row: 2;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-right: 25px;
   display: flex;
-  border: dotted;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: #000080;
+  color: white;
 }

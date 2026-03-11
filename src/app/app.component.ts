@@ -6,6 +6,8 @@ import { WindowsService } from './windows.service';
 import { IconComponent } from './about-icon/icon.component';
 import { ProjectIconComponent } from './project-icon/project-icon.component';
 import { WindowProjectsComponent } from './window-projects/window-projects.component';
+import { FolderIconComponent } from './folder-icon/folder-icon.component';
+import { WindowFolderComponent } from './window-folder/window-folder.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ import { WindowProjectsComponent } from './window-projects/window-projects.compo
     IconComponent,
     ProjectIconComponent,
     WindowProjectsComponent,
+    FolderIconComponent,
+    WindowFolderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

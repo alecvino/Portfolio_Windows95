@@ -1,0 +1,12 @@
+<!-- Projects-Icon -->
+@if (activeWindow === "projects") {
+  <div style="z-index: 1000" class="icon-container" (click)="onOpenFolder()">
+    <img src="folder.png" />
+    Design Folder
+  </div>
+} @else {
+  <div class="icon-container" (click)="onOpenFolder()">
+    <img src="folder.png" />
+    Design Folder
+  </div>
+}

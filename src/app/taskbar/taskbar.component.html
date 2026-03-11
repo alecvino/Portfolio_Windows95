@@ -12,6 +12,13 @@
         <img src="projects.png" class="responsive-img" /> Projects
       </div>
     }
+    @if (windowService.folderWindowState !== "closed") {
+      <div class="item" (click)="onFolderClick()">
+        <img src="folder.png" class="responsive-img" /> Folder
+      </div>
+    }
   </div>
-  <div class="item">12:00</div>
+  <div class="item">
+    <p>{{ formattedDate }}</p>
+  </div>
 </div>
