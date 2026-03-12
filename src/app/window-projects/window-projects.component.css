@@ -82,9 +82,19 @@ footer {
 }
 
 .tag {
+  font-family: MS Sans Serif;
   width: auto;
   height: auto;
   padding: 5px;
   background-color: #000080;
+  color: white;
+}
+
+button.detail {
+  font-family: MS Sans Serif;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: grey;
   color: white;
 }

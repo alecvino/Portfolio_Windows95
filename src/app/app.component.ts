@@ -28,4 +28,10 @@ export class AppComponent {
   title = 'PVL1';
 
   windowService = inject(WindowsService);
+
+  /* onOpenFolder() {
+    this.windowService.activeWindow = 'folder';
+    this.windowService.folderWindowState = 'open';
+    console.log('Folder opened');
+  }*/
 }

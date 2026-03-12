@@ -10,3 +10,13 @@ body {
 .active {
   z-index: 9999 !important;
 }
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  opacity: 0.5;
+  text-align: center;
+}
