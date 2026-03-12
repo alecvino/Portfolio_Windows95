@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { WindowsService } from '../windows.service';
 import { DatePipe } from '@angular/common';
 
@@ -9,14 +9,36 @@ import { DatePipe } from '@angular/common';
   styleUrl: './taskbar.component.css',
   providers: [DatePipe],
 })
-export class TaskbarComponent {
+export class TaskbarComponent implements OnInit, OnDestroy {
   windowService = inject(WindowsService);
-  formattedDate: string;
 
-  constructor(private datePipe: DatePipe) {
-    const today = new Date();
-    this.formattedDate =
-      this.datePipe.transform(today, 'dd.MM.yyyy HH:mm') ?? '';
+  currentTime: Date = new Date();
+
+  formattedDate: string = '';
+  private timerId: any;
+
+  constructor(private datePipe: DatePipe) {}
+
+  ngOnInit(): void {
+    // Initial setzen
+    this.updateTime();
+
+    // Jede Sekunde aktualisieren
+    this.timerId = setInterval(() => {
+      this.updateTime();
+    }, 1000);
+  }
+
+  private updateTime(): void {
+    const now = new Date();
+    this.formattedDate = this.datePipe.transform(now, 'dd.MM.yyyy HH:mm') ?? '';
+  }
+
+  ngOnDestroy(): void {
+    // Timer stoppen, wenn Komponente zerstört wird
+    if (this.timerId) {
+      clearInterval(this.timerId);
+    }
   }
 
   onProjectsClick() {
