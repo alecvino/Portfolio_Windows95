@@ -11,9 +11,13 @@
 <app-icon></app-icon>
 <app-window *ngIf="windowService.aboutWindowState !== 'closed'"></app-window>
 <app-project-icon></app-project-icon>
-<app-window-projects *ngIf="windowService.projectsWindowState !== 'closed'"></app-window-projects>
+<app-window-projects
+  *ngIf="windowService.projectsWindowState !== 'closed'"
+></app-window-projects>
 <app-folder-icon></app-folder-icon>
-<app-window-folder *ngIf="windowService.folderWindowState !== 'closed'"></app-window-folder>
+<app-window-folder
+  *ngIf="windowService.folderWindowState !== 'closed'"
+></app-window-folder>
 
 <router-outlet />
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
