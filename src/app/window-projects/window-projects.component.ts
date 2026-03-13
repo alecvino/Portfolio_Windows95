@@ -1,5 +1,5 @@
 import { CdkDrag } from '@angular/cdk/drag-drop';
-import { Component, Inject, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { WindowsService } from '../windows.service';
 import { CommonModule, NgClass } from '@angular/common';
 
@@ -11,6 +11,7 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class WindowProjectsComponent {
   windowService = inject(WindowsService);
+  activeWindow: string = '';
 
   onClose() {
     this.windowService.projectsWindowState = 'closed';
@@ -20,5 +21,11 @@ export class WindowProjectsComponent {
   onMinimize() {
     this.windowService.projectsWindowState = 'minimized';
     console.log('Projects window minimized');
+  }
+
+  onOpenLuma() {
+    this.windowService.activeWindow = 'luma';
+    this.windowService.lumaWindowState = 'open';
+    console.log('Luma opened');
   }
 }

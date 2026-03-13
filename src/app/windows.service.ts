@@ -9,6 +9,7 @@ export class WindowsService {
   aboutWindowState: WindowState = 'closed';
   projectsWindowState: WindowState = 'closed';
   folderWindowState: WindowState = 'closed';
+  lumaWindowState: WindowState = 'closed';
 
   activeWindow: string = '';
 

@@ -18,6 +18,7 @@
 <app-window-folder
   *ngIf="windowService.folderWindowState !== 'closed'"
 ></app-window-folder>
+<app-luma *ngIf="windowService.lumaWindowState !== 'closed'"></app-luma>
 
 <router-outlet />
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

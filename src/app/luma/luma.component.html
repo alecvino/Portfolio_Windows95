@@ -1,0 +1,32 @@
+<!-- Fenster -->
+<div *ngIf="windowService.lumaWindowState !== 'minimized'">
+  <div
+    cdkDrag
+    (mousedown)="windowService.activeWindow = 'luma'"
+    [ngClass]="windowService.activeWindow === 'luma' ? 'active' : ''"
+    class="window"
+  >
+    <div class="window-banner">
+      <div class="window-title">
+        <img src="projects.png" class="responsive-img" />
+        Luma Process
+      </div>
+      <div>
+        <button (click)="onMinimize()"><img src="minimize.png" /></button>
+        <button><img src="maximize.png" /></button>
+        <button (click)="onClose()"><img src="close.png" /></button>
+      </div>
+    </div>
+    <div class="project-container">
+      <h1>Luma Process Details</h1>
+
+      <h3>Step 1: Research</h3>
+      <h3>Step 2: User Interviews & Personas</h3>
+      <h3>Step 3: Moodboard</h3>
+      <img src="luma_moodboard.png" class="picture" />
+      <h3>Step 4: Prototyping (my main role)</h3>
+      <h3>Step 5: Image video (my main role)</h3>
+      <div class="content"></div>
+    </div>
+  </div>
+</div>

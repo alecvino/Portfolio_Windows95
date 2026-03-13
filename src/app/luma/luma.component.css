@@ -1,0 +1,50 @@
+.window-title {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  position: absolute;
+  top: 50px;
+  left: 350px;
+  width: 50%;
+  height: 80%;
+  border-style: outset;
+  background-color: #c0c0c0;
+}
+
+.window-banner {
+  width: 100%;
+  height: 25px;
+  background-color: #808080;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-container {
+  width: 100%;
+  height: 96%;
+
+  display: grid;
+  /*border: dotted;*/
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.content {
+  height: auto;
+}
+
+.picture {
+  width: 500px;
+  height: auto;
+  margin: 25px;
+  border-style: solid;
+  background-color: white;
+}

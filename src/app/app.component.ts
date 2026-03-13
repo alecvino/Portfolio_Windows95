@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TaskbarComponent } from './taskbar/taskbar.component';
 import { WindowComponent } from './window-about/window.component';
@@ -8,10 +9,12 @@ import { ProjectIconComponent } from './project-icon/project-icon.component';
 import { WindowProjectsComponent } from './window-projects/window-projects.component';
 import { FolderIconComponent } from './folder-icon/folder-icon.component';
 import { WindowFolderComponent } from './window-folder/window-folder.component';
+import { LumaComponent } from './luma/luma.component';
 
 @Component({
   selector: 'app-root',
   imports: [
+    CommonModule,
     RouterOutlet,
     TaskbarComponent,
     WindowComponent,
@@ -20,6 +23,7 @@ import { WindowFolderComponent } from './window-folder/window-folder.component';
     WindowProjectsComponent,
     FolderIconComponent,
     WindowFolderComponent,
+    LumaComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
