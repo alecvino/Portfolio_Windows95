@@ -2,6 +2,7 @@ import { CdkDrag } from '@angular/cdk/drag-drop';
 import { Component, inject } from '@angular/core';
 import { WindowsService } from '../windows.service';
 import { CommonModule, NgClass } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-window',
@@ -20,5 +21,29 @@ export class WindowComponent {
   onMinimize() {
     this.windowService.aboutWindowState = 'minimized';
     console.log('Window minimized');
+  }
+
+  constructor(private http: HttpClient) {}
+
+  downloadCV(): void {
+    const fileUrl = 'CV_MiaGagelColomer.pdf'; // Replace with your file URL
+
+    this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
+      next: (blob) => {
+        // Create a temporary link element
+        const link = document.createElement('a');
+        const url = window.URL.createObjectURL(blob);
+        link.href = url;
+        link.download = 'CV_MiaGagelColomer.pdf'; // Suggested filename
+        link.click();
+
+        // Cleanup
+        window.URL.revokeObjectURL(url);
+      },
+      error: (err) => {
+        console.error('File download failed:', err);
+        alert('Failed to download file.');
+      },
+    });
   }
 }

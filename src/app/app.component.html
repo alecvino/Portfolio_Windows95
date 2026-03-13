@@ -9,17 +9,11 @@
 
 <app-taskbar></app-taskbar>
 <app-icon></app-icon>
-@if (windowService.aboutWindowState !== "closed") {
-  <app-window></app-window>
-}
+<app-window *ngIf="windowService.aboutWindowState !== 'closed'"></app-window>
 <app-project-icon></app-project-icon>
-@if (windowService.projectsWindowState !== "closed") {
-  <app-window-projects></app-window-projects>
-}
+<app-window-projects *ngIf="windowService.projectsWindowState !== 'closed'"></app-window-projects>
 <app-folder-icon></app-folder-icon>
-@if (windowService.folderWindowState !== "closed") {
-  <app-window-folder></app-window-folder>
-}
+<app-window-folder *ngIf="windowService.folderWindowState !== 'closed'"></app-window-folder>
 
 <router-outlet />
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
