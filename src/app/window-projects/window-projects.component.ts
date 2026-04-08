@@ -1,5 +1,5 @@
 import { CdkDrag } from '@angular/cdk/drag-drop';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { WindowsService } from '../windows.service';
 import { CommonModule, NgClass } from '@angular/common';
 
@@ -9,9 +9,33 @@ import { CommonModule, NgClass } from '@angular/common';
   templateUrl: './window-projects.component.html',
   styleUrl: './window-projects.component.css',
 })
-export class WindowProjectsComponent {
+export class WindowProjectsComponent implements OnInit {
   windowService = inject(WindowsService);
   activeWindow: string = '';
+  private previousState: string = 'closed';
+
+  ngOnInit() {
+    if (
+      this.windowService.projectsWindowState === 'open' &&
+      this.windowService.projectsWindowOffset === 0
+    ) {
+      this.windowService.projectsWindowOffset =
+        this.windowService.getNextOffset();
+    }
+  }
+
+  ngDoCheck() {
+    if (
+      this.previousState === 'closed' &&
+      this.windowService.projectsWindowState === 'open'
+    ) {
+      if (this.windowService.projectsWindowOffset === 0) {
+        this.windowService.projectsWindowOffset =
+          this.windowService.getNextOffset();
+      }
+    }
+    this.previousState = this.windowService.projectsWindowState;
+  }
 
   onClose() {
     this.windowService.projectsWindowState = 'closed';

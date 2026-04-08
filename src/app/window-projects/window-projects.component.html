@@ -4,6 +4,10 @@
     cdkDrag
     (mousedown)="windowService.activeWindow = 'projects'"
     class="window"
+    [ngStyle]="{
+      'top.px': 50,
+      'left.px': 300,
+    }"
     [ngClass]="{
       active: windowService.activeWindow === 'projects',
       maximized: windowService.projectsWindowMaximized,

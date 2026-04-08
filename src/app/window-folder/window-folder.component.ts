@@ -22,16 +22,6 @@ export class WindowFolderComponent {
     console.log('Folder window minimized');
   }
 
-  onToggleMaximize() {
-    this.windowService.folderWindowMaximized =
-      !this.windowService.folderWindowMaximized;
-    this.windowService.activeWindow = 'folder';
-    console.log(
-      'Folder window maximize toggled:',
-      this.windowService.folderWindowMaximized,
-    );
-  }
-
   images = [
     { src: 'fillerPictures/pinkDice.jpg', title: 'Bild 1' },
     { src: 'fillerPictures/whiteDice.jpg', title: 'Bild 2' },

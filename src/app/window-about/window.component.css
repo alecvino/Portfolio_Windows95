@@ -7,8 +7,6 @@
 
 .window {
   position: fixed;
-  top: 50px;
-  left: 50px;
   width: min(90vw, 560px);
   max-width: 100%;
   max-height: min(85vh, 550px);

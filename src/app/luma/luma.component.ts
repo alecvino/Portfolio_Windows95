@@ -1,5 +1,5 @@
 import { WindowsService } from '../windows.service';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CdkDrag } from '@angular/cdk/drag-drop';
 
@@ -9,8 +9,31 @@ import { CdkDrag } from '@angular/cdk/drag-drop';
   templateUrl: './luma.component.html',
   styleUrl: './luma.component.css',
 })
-export class LumaComponent {
+export class LumaComponent implements OnInit {
   windowService = inject(WindowsService);
+  private previousState: string = 'closed';
+
+  ngOnInit() {
+    if (
+      this.windowService.lumaWindowState === 'open' &&
+      this.windowService.lumaWindowOffset === 0
+    ) {
+      this.windowService.lumaWindowOffset = this.windowService.getNextOffset();
+    }
+  }
+
+  ngDoCheck() {
+    if (
+      this.previousState === 'closed' &&
+      this.windowService.lumaWindowState === 'open'
+    ) {
+      if (this.windowService.lumaWindowOffset === 0) {
+        this.windowService.lumaWindowOffset =
+          this.windowService.getNextOffset();
+      }
+    }
+    this.previousState = this.windowService.lumaWindowState;
+  }
 
   onClose() {
     this.windowService.lumaWindowState = 'closed';
