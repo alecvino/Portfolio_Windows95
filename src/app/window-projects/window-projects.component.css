@@ -6,13 +6,16 @@
 }
 
 .window {
-  position: absolute;
+  position: fixed;
   top: 50px;
-  left: 350px;
-  width: 45%;
-  height: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(95vw, 700px);
+  max-width: 100%;
+  max-height: min(85vh, 700px);
   border-style: outset;
   background-color: #c0c0c0;
+  overflow: hidden;
 }
 
 .window-banner {
@@ -39,7 +42,7 @@
 }
 
 .picture {
-  width: 300px;
+  width: min(100%, 300px);
   height: 150px;
   margin: 25px;
   border-style: solid;
@@ -50,6 +53,60 @@ article {
   margin: 10px;
   border: solid;
   display: grid;
+}
+
+@media (max-width: 768px) {
+  .window {
+    top: 15px;
+    width: calc(100vw - 20px);
+    max-height: 85vh;
+  }
+
+  .window-banner {
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .project-container,
+  .content,
+  main,
+  aside,
+  footer {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  .picture {
+    width: 100%;
+    margin: 12px auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .gallery-grid {
+    gap: 10px;
+  }
+
+  .nav-btn.left {
+    left: 6px;
+  }
+
+  .nav-btn.right {
+    right: 6px;
+  }
+
+  .lightbox-content {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  .lightbox-content img {
+    height: auto;
+  }
 }
 
 main {

@@ -33,3 +33,20 @@
   width: auto;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .rectangle {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 4px 8px;
+  }
+
+  .rectangle-items {
+    gap: 4px;
+  }
+
+  .item {
+    height: auto;
+    padding: 4px 8px;
+  }
+}

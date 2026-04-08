@@ -6,13 +6,16 @@
 }
 
 .window {
-  position: absolute;
+  position: fixed;
   top: 50px;
-  left: 350px;
-  width: 45%;
-  height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(95vw, 700px);
+  max-width: 100%;
+  max-height: min(85vh, 750px);
   border-style: outset;
   background-color: #c0c0c0;
+  overflow: hidden;
 }
 
 .window-banner {
@@ -146,4 +149,31 @@
   font-size: 28px;
   color: #333;
   /*cursor: pointer;*/
+}
+
+@media (max-width: 768px) {
+  .window {
+    top: 15px;
+    width: calc(100vw - 20px);
+    max-height: 85vh;
+  }
+
+  .window-banner {
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .project-container,
+  .content,
+  main,
+  aside,
+  footer {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
