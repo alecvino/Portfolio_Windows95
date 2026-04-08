@@ -21,4 +21,14 @@ export class LumaComponent {
     this.windowService.lumaWindowState = 'minimized';
     console.log('Window minimized');
   }
+
+  onToggleMaximize() {
+    this.windowService.lumaWindowMaximized =
+      !this.windowService.lumaWindowMaximized;
+    this.windowService.activeWindow = 'luma';
+    console.log(
+      'Luma window maximize toggled:',
+      this.windowService.lumaWindowMaximized,
+    );
+  }
 }

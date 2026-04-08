@@ -23,6 +23,16 @@ export class WindowComponent {
     console.log('Window minimized');
   }
 
+  onToggleMaximize() {
+    this.windowService.aboutWindowMaximized =
+      !this.windowService.aboutWindowMaximized;
+    this.windowService.activeWindow = 'about';
+    console.log(
+      'Window maximize toggled:',
+      this.windowService.aboutWindowMaximized,
+    );
+  }
+
   constructor(private http: HttpClient) {}
 
   downloadCV(): void {

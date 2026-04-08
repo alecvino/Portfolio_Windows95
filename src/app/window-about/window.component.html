@@ -3,8 +3,11 @@
   <div
     cdkDrag
     (mousedown)="windowService.activeWindow = 'about'"
-    [ngClass]="windowService.activeWindow === 'about' ? 'active' : ''"
     class="window"
+    [ngClass]="{
+      active: windowService.activeWindow === 'about',
+      maximized: windowService.aboutWindowMaximized,
+    }"
   >
     <div class="window-banner">
       <div class="window-title">
@@ -13,7 +16,7 @@
       </div>
       <div>
         <button (click)="onMinimize()"><img src="minimize.png" /></button>
-        <button><img src="maximize.png" /></button>
+        <button (click)="onToggleMaximize()"><img src="maximize.png" /></button>
         <button (click)="onClose()"><img src="close.png" /></button>
       </div>
     </div>

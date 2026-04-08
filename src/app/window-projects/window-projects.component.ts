@@ -23,6 +23,16 @@ export class WindowProjectsComponent {
     console.log('Projects window minimized');
   }
 
+  onToggleMaximize() {
+    this.windowService.projectsWindowMaximized =
+      !this.windowService.projectsWindowMaximized;
+    this.windowService.activeWindow = 'projects';
+    console.log(
+      'Projects window maximize toggled:',
+      this.windowService.projectsWindowMaximized,
+    );
+  }
+
   onOpenLuma() {
     this.windowService.activeWindow = 'luma';
     this.windowService.lumaWindowState = 'open';
