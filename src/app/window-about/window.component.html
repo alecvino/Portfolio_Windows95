@@ -16,14 +16,14 @@
       </div>
       <div>
         <button (click)="onMinimize()"><img src="minimize.png" /></button>
-        <button><img src="maximize.png" /></button>
+        <button (click)="onToggleMaximize()"><img src="maximize.png" /></button>
         <button (click)="onClose()"><img src="close.png" /></button>
       </div>
     </div>
     <div class="project-container">
       <aside>
-        <!-- insert src image -->
-        <img src="profile.png" class="responsive-img picture" />
+        <!-- insert src image src="profile.png"  -->
+        <img class="responsive-img picture" />
       </aside>
       <main>
         <h1>
@@ -35,8 +35,8 @@
           Beginner UX/UI Designer <br />
           Based in Augsburg & Ingolstadt
         </p>
-
-        <button (click)="downloadCV()">Download CV</button>
+        <!--(click)="downloadCV()"-->
+        <button>Download CV</button>
       </main>
       <footer>
         I'm curreently in my 4th semester of my bachelor's degree in User

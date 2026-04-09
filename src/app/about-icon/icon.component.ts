@@ -13,8 +13,8 @@ export class IconComponent {
 
   onOpen() {
     this.windowService.activeWindow = 'about';
-
     this.windowService.aboutWindowState = 'open';
+    this.windowService.aboutWindowMaximized = false;
     console.log('About me opened');
   }
 }

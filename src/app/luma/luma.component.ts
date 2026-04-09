@@ -14,12 +14,7 @@ export class LumaComponent implements OnInit {
   private previousState: string = 'closed';
 
   ngOnInit() {
-    if (
-      this.windowService.lumaWindowState === 'open' &&
-      this.windowService.lumaWindowOffset === 0
-    ) {
-      this.windowService.lumaWindowOffset = this.windowService.getNextOffset();
-    }
+    // Removed getNextOffset call
   }
 
   ngDoCheck() {
@@ -27,10 +22,7 @@ export class LumaComponent implements OnInit {
       this.previousState === 'closed' &&
       this.windowService.lumaWindowState === 'open'
     ) {
-      if (this.windowService.lumaWindowOffset === 0) {
-        this.windowService.lumaWindowOffset =
-          this.windowService.getNextOffset();
-      }
+      // Removed getNextOffset call
     }
     this.previousState = this.windowService.lumaWindowState;
   }

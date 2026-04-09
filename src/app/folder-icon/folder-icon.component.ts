@@ -14,6 +14,7 @@ export class FolderIconComponent {
   onOpenFolder() {
     this.windowService.activeWindow = 'folder';
     this.windowService.folderWindowState = 'open';
+    this.windowService.folderWindowMaximized = false;
     console.log('Folder opened');
   }
 }

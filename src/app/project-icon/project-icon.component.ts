@@ -14,6 +14,7 @@ export class ProjectIconComponent {
   onOpenProjects() {
     this.windowService.activeWindow = 'projects';
     this.windowService.projectsWindowState = 'open';
+    this.windowService.projectsWindowMaximized = false;
     console.log('Projects opened');
   }
 }
