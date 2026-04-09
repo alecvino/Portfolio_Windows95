@@ -11,6 +11,7 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class WindowFolderComponent {
   windowService = inject(WindowsService);
+  activeWindow: string = '';
 
   onClose() {
     this.windowService.folderWindowState = 'closed';
