@@ -35,8 +35,8 @@ export class WindowFolderComponent {
 
   images = [
     { src: 'poster/posterAugsburg.jpg', title: 'Bild 1' },
-    { src: 'fillerPictures/whiteDice.jpg', title: 'Bild 2' },
-    { src: 'fillerPictures/greenDice.jpg', title: 'Bild 3' },
+    { src: 'poster/Shapes.jpg', title: 'Bild 2' },
+    { src: 'poster/gradiants.jpg', title: 'Bild 3' },
     { src: 'fillerPictures/blueDice.jpg', title: 'Bild 4' },
     { src: 'fillerPictures/purpleDice.jpg', title: 'Bild 5' },
     /* { src: 'fillerPic.jpg', title: 'Bild 6' },
