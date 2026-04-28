@@ -61,4 +61,11 @@ export class WindowProjectsComponent implements OnInit {
     this.windowService.wdwuWindowMaximized = false;
     console.log('WDWU opened');
   }
+
+  onOpenG2P() {
+    this.windowService.activeWindow = 'g2p';
+    this.windowService.g2pWindowState = 'open';
+    this.windowService.g2pWindowMaximized = false;
+    console.log('G2P opened');
+  }
 }

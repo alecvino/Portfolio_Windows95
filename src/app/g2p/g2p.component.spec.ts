@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LumaComponent } from './luma.component';
+import { G2pComponent } from './g2p.component';
 
-/*
-describe('LumaComponent', () => {
-  let component: LumaComponent;
-  let fixture: ComponentFixture<LumaComponent>;
+/* describe('G2pComponent', () => {
+  let component: G2pComponent;
+  let fixture: ComponentFixture<G2pComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LumaComponent],
+      imports: [G2pComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LumaComponent);
+    fixture = TestBed.createComponent(G2pComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,59 @@
+<!-- Fenster -->
+<div *ngIf="windowService.wdwuWindowState !== 'minimized'">
+  <div
+    cdkDrag
+    (mousedown)="windowService.activeWindow = 'wdwu'"
+    class="window"
+    [ngStyle]="{
+      'top.px': 50,
+      'left.px': 300,
+    }"
+    [ngClass]="{
+      active: windowService.activeWindow === 'wdwu',
+      maximized: windowService.wdwuWindowMaximized,
+    }"
+  >
+    <div class="window-banner">
+      <div class="window-title">
+        <img src="projects.png" class="responsive-img" />
+        Projekt zu Gestaltung 2 Prozess
+      </div>
+      <div>
+        <button (click)="onMinimize()"><img src="minimize.png" /></button>
+        <button (click)="onToggleMaximize()"><img src="maximize.png" /></button>
+        <button (click)="onClose()"><img src="close.png" /></button>
+      </div>
+    </div>
+    <div class="project-container">
+      <h1>Projekt Prozess Details</h1>
+
+      <h3>Übung 1: Icondesign</h3>
+      <p>
+        In der ersten Übung haben wir die Aufgabe bekommen, neue Icons für
+        unsere Hochschul Neuland App zu gestalten.
+      </p>
+      <h3>Schritt 1: Moodboard</h3>
+      <img src="icondesign/icondesignMoodboard.png" class="picture" />
+      <h3>Schritt 2: Metaphern & Skizzen</h3>
+      <p>
+        Bevor ich ein Iconset erstellen konnte, musste ich mir mögliche
+        Methaphern für die Beschreibungen überlegen. Zum Beispiel für die
+        Beschreibung "Home" habe ich mir ein Haus, einen Schüssel, eine Socke
+        und Pantoffeln überlegt.
+      </p>
+      <img src="icondesign/icondesignSkizzen.png" class="picture" />
+      <h3>Schritt 3: Iconset zusammenstellen</h3>
+      <img src="icondesign/icondesignIconset.png" class="picture" />
+      <h3>Schritt 4: Iconset in Adobe Illustrator erstellen</h3>
+      Der letzte Teil bestand daran, die Icons in Adobe Illustrator zu
+      erstellen. Dabei habe ich mich an den Skizzen orientiert, aber auch kleine
+      Änderungen vorgenommen. <br />
+      Ich habe zum Beispiel alle Icons abegrundet und den Profilsmiley mittig
+      platziert.
+      <img src="icondesign/icondesignAdobe.png" class="picture" />
+      Vorschau des finalen Iconsets in der Neuland App:
+      <img src="icondesign/icondesignVorschau.png" class="picture" />
+      <div class="content"></div>
+    </div>
+  </div>
+</div>

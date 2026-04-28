@@ -11,6 +11,7 @@ import { FolderIconComponent } from './folder-icon/folder-icon.component';
 import { WindowFolderComponent } from './window-folder/window-folder.component';
 import { LumaComponent } from './luma/luma.component';
 import { WdwuComponent } from './wdwu/wdwu.component';
+import { G2pComponent } from './g2p/g2p.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { WdwuComponent } from './wdwu/wdwu.component';
     WindowFolderComponent,
     LumaComponent,
     WdwuComponent,
+    G2pComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
