@@ -33,31 +33,9 @@
   display: grid;
   grid-template-columns: 1fr;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.4) rgba(255, 255, 255, 0.2);
-  scroll-behavior: smooth;
   padding-right: 8px;
   flex: 1 1 auto;
   min-height: 0;
-}
-
-.project-container::-webkit-scrollbar {
-  width: 10px;
-}
-
-.project-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.project-container::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-}
-
-.project-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .content {
@@ -82,7 +60,6 @@ article {
   .window {
     top: 15px;
     width: calc(100vw - 20px);
-    height: 85vh;
     max-height: 85vh;
   }
 
