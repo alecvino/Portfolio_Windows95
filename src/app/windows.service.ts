@@ -10,11 +10,13 @@ export class WindowsService {
   projectsWindowState: WindowState = 'closed';
   folderWindowState: WindowState = 'closed';
   lumaWindowState: WindowState = 'closed';
+  wdwuWindowState: WindowState = 'closed';
 
   aboutWindowMaximized = false;
   projectsWindowMaximized = false;
   folderWindowMaximized = false;
   lumaWindowMaximized = false;
+  wdwuWindowMaximized = false;
 
   activeWindow: string = '';
 

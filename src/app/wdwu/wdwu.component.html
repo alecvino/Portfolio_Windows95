@@ -1,0 +1,69 @@
+<!-- Fenster -->
+<div *ngIf="windowService.wdwuWindowState !== 'minimized'">
+  <div
+    cdkDrag
+    (mousedown)="windowService.activeWindow = 'wdwu'"
+    class="window"
+    [ngStyle]="{
+      'top.px': 50,
+      'left.px': 300,
+    }"
+    [ngClass]="{
+      active: windowService.activeWindow === 'wdwu',
+      maximized: windowService.wdwuWindowMaximized,
+    }"
+  >
+    <div class="window-banner">
+      <div class="window-title">
+        <img src="projects.png" class="responsive-img" />
+        WDWU Prozess
+      </div>
+      <div>
+        <button (click)="onMinimize()"><img src="minimize.png" /></button>
+        <button (click)="onToggleMaximize()"><img src="maximize.png" /></button>
+        <button (click)="onClose()"><img src="close.png" /></button>
+      </div>
+    </div>
+    <div class="project-container">
+      <h1>WDWU Prozess Details</h1>
+
+      <h3>Schritt 1: User Research</h3>
+      <p>
+        In diesem Schritt haben wir einen Interview-Fragebogen erstellt, um die
+        Bedürfnisse der Nutzer zu verstehen. Im Anschluss haben Interviews mit
+        Mitstudierenden geführt, um Einblicke in ihre Erfahrungen mit dem Thema
+        "Vertrauen in KI im Studiumskontext" zu gewinnen.
+        <br />
+        <br />
+        <u>Unser Fazit:</u> <br />
+        - KI ist im Studium bereits fest integriert, wird aber als unsicheres,
+        opportunistisches Werkzeug genutzt
+        <br />
+        - Nutzer wollen weniger „Magie“ – mehr Zuverlässigkeit und
+        Kontextverständnis
+        <br />
+        <u>Unsere Idee:</u> <br />
+        - Ein recherche Tool mit einem Second Brain
+      </p>
+
+      <h3>Schritt 2: Konkurrenz und Konzeption</h3>
+      <p>
+        Wir haben bestehende KI-Tools analysiert, um ihre Stärken und Schwächen
+        zu verstehen. In unserem Fall waren das ChatGPT, NoteLM, Anara, Taskade,
+        Miro und Epsilon. Basierend auf diesen Erkenntnissen haben wir unser
+        eigenes Tool konzipiert, das die Bedürfnisse der Nutzer besser erfüllt.
+        <br />
+        <br />
+        <u>Unser Fazit:</u> <br />
+        - Bestehende Tools bieten entweder KI-Integration oder Second Brain,
+        aber selten beides
+        <br />
+        - Oftmals fehlt es an Zuverlässigkeit der Zeilenangabe und
+        Kontextverständnis
+      </p>
+
+      <h3>Schritt 3: Informationsarchitektur (momentaner Stand)</h3>
+      <div class="content"></div>
+    </div>
+  </div>
+</div>

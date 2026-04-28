@@ -113,6 +113,7 @@ main {
   grid-column: 4 / 13;
   grid-row: 1;
   margin: 25px;
+  padding-left: 25px;
 }
 
 aside {

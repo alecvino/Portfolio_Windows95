@@ -10,6 +10,7 @@ import { WindowProjectsComponent } from './window-projects/window-projects.compo
 import { FolderIconComponent } from './folder-icon/folder-icon.component';
 import { WindowFolderComponent } from './window-folder/window-folder.component';
 import { LumaComponent } from './luma/luma.component';
+import { WdwuComponent } from './wdwu/wdwu.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { LumaComponent } from './luma/luma.component';
     FolderIconComponent,
     WindowFolderComponent,
     LumaComponent,
+    WdwuComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -54,4 +54,11 @@ export class WindowProjectsComponent implements OnInit {
     this.windowService.lumaWindowMaximized = false;
     console.log('Luma opened');
   }
+
+  onOpenWDWU() {
+    this.windowService.activeWindow = 'wdwu';
+    this.windowService.wdwuWindowState = 'open';
+    this.windowService.wdwuWindowMaximized = false;
+    console.log('WDWU opened');
+  }
 }

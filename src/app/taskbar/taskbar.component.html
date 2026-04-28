@@ -4,17 +4,17 @@
     <div class="item"><img src="start.png" class="responsive-img" /> Start</div>
     @if (windowService.aboutWindowState !== "closed") {
       <div class="item" (click)="onAboutClick()">
-        <img src="about.png" class="responsive-img" /> About me
+        <img src="about.png" class="responsive-img" /> Über mich
       </div>
     }
     @if (windowService.projectsWindowState !== "closed") {
       <div class="item" (click)="onProjectsClick()">
-        <img src="projects.png" class="responsive-img" /> Projects
+        <img src="projects.png" class="responsive-img" /> Projekte
       </div>
     }
     @if (windowService.folderWindowState !== "closed") {
       <div class="item" (click)="onFolderClick()">
-        <img src="folder.png" class="responsive-img" /> Folder
+        <img src="folder.png" class="responsive-img" /> Ordner
       </div>
     }
   </div>
