@@ -62,7 +62,7 @@ article {
   .window {
     top: 15px;
     width: calc(100vw - 20px);
-    height: auto;
+    height: 90vh;
     max-height: 90vh;
   }
 
