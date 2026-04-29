@@ -40,6 +40,7 @@
   scroll-behavior: smooth;
   flex: 1 1 auto;
   min-height: 0;
+  height: 100%;
 }
 
 .content {
@@ -77,8 +78,7 @@
   }
 
   .picture {
-    width: 100%;
-    margin: 12px auto;
+    display: none;
   }
 
   footer {

@@ -25,7 +25,7 @@ body {
 .window {
   top: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  /*transform: translateX(-50%);*/
 }
 
 @media (max-width: 768px) {
