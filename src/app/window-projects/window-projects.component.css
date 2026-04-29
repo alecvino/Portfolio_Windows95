@@ -33,6 +33,7 @@
   display: grid;
   grid-template-columns: 1fr;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding-right: 8px;
   flex: 1 1 auto;
   min-height: 0;

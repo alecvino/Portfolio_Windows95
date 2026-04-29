@@ -22,6 +22,20 @@ body {
   overflow-y: auto;
 }
 
+.window {
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .window {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .active {
   z-index: 9999 !important;
 }
