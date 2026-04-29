@@ -29,15 +29,17 @@
 
 .project-container {
   width: 100%;
-  height: 92%;
   display: grid;
   grid-template-columns: minmax(180px, 220px) 1fr;
   grid-template-rows: auto 1fr auto;
   gap: 16px;
   padding: 16px;
   padding-right: 8px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .content {
