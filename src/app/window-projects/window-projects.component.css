@@ -71,6 +71,10 @@ article {
     padding: 0 10px;
   }
 
+  .project-container {
+    height: calc(100% - 34px);
+  }
+
   .project-container,
   .content,
   main,
