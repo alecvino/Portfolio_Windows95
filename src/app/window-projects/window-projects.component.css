@@ -62,7 +62,8 @@ article {
   .window {
     top: 15px;
     width: calc(100vw - 20px);
-    max-height: 85vh;
+    height: auto;
+    max-height: 90vh;
   }
 
   .window-banner {

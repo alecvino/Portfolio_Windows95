@@ -36,7 +36,7 @@ export class WindowComponent {
   constructor(private http: HttpClient) {}
 
   downloadCV(): void {
-    const fileUrl = 'CV_GagelColomer.pdf'; // Replace with your file URL
+    const fileUrl = 'CV_GagelColomer_Mia.pdf'; // Replace with your file URL
 
     this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
       next: (blob) => {
