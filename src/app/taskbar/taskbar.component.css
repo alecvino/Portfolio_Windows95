@@ -36,17 +36,27 @@
 
 @media (max-width: 768px) {
   .rectangle {
-    flex-wrap: wrap;
     height: auto;
     padding: 4px 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .rectangle-items {
     gap: 4px;
+    flex: 1;
+    min-width: 0;
   }
 
   .item {
     height: auto;
-    padding: 4px 8px;
+    padding: 4px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .item p {
+    font-size: 12px;
   }
 }
