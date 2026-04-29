@@ -76,7 +76,8 @@ article {
   }
 
   .project-container {
-    height: calc(100% - 34px);
+    height: calc(100% - 34px) !important;
+    overflow-y: scroll !important;
   }
 
   .project-container,
@@ -125,7 +126,8 @@ article {
 }
 
 main {
-  margin: 0;
+  /*margin: 0;*/
+  padding-left: 45px;
 }
 
 aside {

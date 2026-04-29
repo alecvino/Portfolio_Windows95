@@ -64,7 +64,8 @@
   }
 
   .project-container {
-    height: calc(100% - 34px);
+    height: calc(100% - 34px) !important;
+    overflow-y: scroll !important;
   }
 
   .project-container,

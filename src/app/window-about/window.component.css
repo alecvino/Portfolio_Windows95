@@ -60,6 +60,7 @@
   .window {
     top: 15px;
     width: calc(100vw - 20px);
+    height: 85vh;
     max-height: 85vh;
   }
 
@@ -69,7 +70,8 @@
   }
 
   .project-container {
-    height: calc(100% - 34px);
+    height: calc(100% - 34px) !important;
+    overflow-y: scroll !important;
   }
 
   .project-container,
