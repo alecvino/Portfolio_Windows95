@@ -48,6 +48,11 @@
     min-width: 0;
   }
 
+  .rectangle-items .item {
+    flex: 1;
+    justify-content: center;
+  }
+
   .item {
     height: auto;
     padding: 4px 6px;
