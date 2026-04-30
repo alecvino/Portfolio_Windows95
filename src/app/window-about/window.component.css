@@ -99,6 +99,44 @@ main {
   grid-row: 1;
   margin: 0;
 }
+
+/* Custom Scrollbar for Windows 95 style */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border: 1px inset #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="8,4 12,10 4,10" fill="%23000000"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="8,12 12,6 4,6" fill="%23000000"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
 aside {
   grid-column: 1 / 2;
   grid-row: 1;
