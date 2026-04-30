@@ -1,16 +1,16 @@
 <!-- Fenster -->
-<div *ngIf="windowService.wdwuWindowState !== 'minimized'">
+<div *ngIf="windowService.g2pWindowState !== 'minimized'">
   <div
     cdkDrag
-    (mousedown)="windowService.activeWindow = 'wdwu'"
+    (mousedown)="windowService.activeWindow = 'g2p'"
     class="window"
     [ngStyle]="{
       'top.px': 50,
       'left.px': 300,
     }"
     [ngClass]="{
-      active: windowService.activeWindow === 'wdwu',
-      maximized: windowService.wdwuWindowMaximized,
+      active: windowService.activeWindow === 'g2p',
+      maximized: windowService.g2pWindowMaximized,
     }"
   >
     <div class="window-banner">
