@@ -37,9 +37,9 @@ export class WindowFolderComponent {
     { src: 'poster/posterAugsburg.jpg', title: 'Bild 1' },
     { src: 'poster/Shapes.jpg', title: 'Bild 2' },
     { src: 'poster/gradiants.jpg', title: 'Bild 3' },
-    /* { src: 'fillerPictures/blueDice.jpg', title: 'Bild 4' },
-    { src: 'fillerPictures/purpleDice.jpg', title: 'Bild 5' },
-   { src: 'fillerPic.jpg', title: 'Bild 6' },
+    { src: 'poster/Poster-NihilisBlues.jpg', title: 'Bild 4' },
+    { src: 'poster/Poster-Brutalism.jpg', title: 'Bild 5' },
+    /*{ src: 'fillerPic.jpg', title: 'Bild 6' },
     { src: 'fillerPic.jpg', title: 'Bild 7' },
     { src: 'fillerPic.jpg', title: 'Bild 8' },
     { src: 'fillerPic.jpg', title: 'Bild 9' },*/
