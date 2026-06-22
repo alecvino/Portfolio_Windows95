@@ -36,7 +36,7 @@ export class WindowComponent {
   constructor(private http: HttpClient) {}
 
   downloadCV(): void {
-    const fileUrl = 'CV_GagelColomer_Mia.pdf'; // Replace with your file URL
+    const fileUrl = 'Mia_GagelColomer_CV.pdf'; // Replace with your file URL
 
     this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
       next: (blob) => {
@@ -44,7 +44,7 @@ export class WindowComponent {
         const link = document.createElement('a');
         const url = window.URL.createObjectURL(blob);
         link.href = url;
-        link.download = 'CV_GagelColomer.pdf'; // Suggested filename
+        link.download = 'Mia_GagelColomer_CV.pdf'; // Suggested filename
         link.click();
 
         // Cleanup
